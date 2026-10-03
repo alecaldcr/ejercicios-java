@@ -9,6 +9,9 @@ import creacionales.factorymethod.ejercicio3.ExcelReportCreator;
 import creacionales.factorymethod.ejercicio3.HtmlReportCreator;
 import creacionales.factorymethod.ejercicio3.PdfReportCreator;
 import creacionales.factorymethod.ejercicio3.ReportFactory;
+import creacionales.factorymethod.ejercicio4.DocumentExportFactory;
+import creacionales.factorymethod.ejercicio4.JsonExporterCreator;
+import creacionales.factorymethod.ejercicio4.PdfExporterCreator;
 import creacionales.singleton.*;
 
 public class Main {
@@ -63,8 +66,14 @@ public class Main {
         ReportFactory pdf = new PdfReportCreator();
         ReportFactory excel = new ExcelReportCreator();
         ReportFactory html = new HtmlReportCreator();
-        pdf.processReport("Ventas de Septiembre");
-        excel.processReport("Ventas de Septiembre");
-        html.processReport("Ventas de Septiembre");
+//        pdf.processReport("Ventas de Septiembre");
+//        excel.processReport("Ventas de Septiembre");
+//        html.processReport("Ventas de Septiembre");
+
+        // Document Exporter
+        DocumentExportFactory filePDf = new PdfExporterCreator();
+        filePDf.processExport("Reporte mensual");
+        DocumentExportFactory fileJson = new JsonExporterCreator();
+        fileJson.processExport("Reporte mensual");
     }
 }
