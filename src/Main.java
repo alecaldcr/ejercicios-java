@@ -2,7 +2,6 @@ import creacionales.factorymethod.ejercicio1.CarFactory;
 import creacionales.factorymethod.ejercicio1.SedanCreator;
 import creacionales.factorymethod.ejercicio1.SuvCreator;
 import creacionales.factorymethod.ejercicio2.CreditCardCreator;
-import creacionales.factorymethod.ejercicio2.Payment;
 import creacionales.factorymethod.ejercicio2.PaymentFactory;
 import creacionales.factorymethod.ejercicio2.PaypalCreator;
 import creacionales.factorymethod.ejercicio3.ExcelReportCreator;
@@ -16,6 +15,9 @@ import creacionales.factorymethod.ejercicio5.EmailNotificationCreator;
 import creacionales.factorymethod.ejercicio5.NotificationFactory;
 import creacionales.factorymethod.ejercicio5.PushNotificationCreator;
 import creacionales.factorymethod.ejercicio5.SmsNotificationCreator;
+import creacionales.factorymethod.ejercicio6.CsvReportCreatorEx6;
+import creacionales.factorymethod.ejercicio6.PdfReportCreatorEx6;
+import creacionales.factorymethod.ejercicio6.ReportGeneratorFactory;
 import creacionales.singleton.*;
 
 public class Main {
@@ -89,7 +91,12 @@ public class Main {
 //        notificationPush.processNotification("Tu pedido ha sido enviado");
 
         // Report Generator
+        ReportGeneratorFactory reportPdf = new PdfReportCreatorEx6();
+//        reportPdf.processReport("Ventas del mes");
+        ReportGeneratorFactory reportCsv = new CsvReportCreatorEx6();
+//        reportCsv.processReport("Ventas del mes de Junio");
 
+        // Order Processing System
 
 
     }
