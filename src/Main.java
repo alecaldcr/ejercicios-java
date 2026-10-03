@@ -12,6 +12,10 @@ import creacionales.factorymethod.ejercicio3.ReportFactory;
 import creacionales.factorymethod.ejercicio4.DocumentExportFactory;
 import creacionales.factorymethod.ejercicio4.JsonExporterCreator;
 import creacionales.factorymethod.ejercicio4.PdfExporterCreator;
+import creacionales.factorymethod.ejercicio5.EmailNotificationCreator;
+import creacionales.factorymethod.ejercicio5.NotificationFactory;
+import creacionales.factorymethod.ejercicio5.PushNotificationCreator;
+import creacionales.factorymethod.ejercicio5.SmsNotificationCreator;
 import creacionales.singleton.*;
 
 public class Main {
@@ -72,8 +76,21 @@ public class Main {
 
         // Document Exporter
         DocumentExportFactory filePDf = new PdfExporterCreator();
-        filePDf.processExport("Reporte mensual");
+//        filePDf.processExport("Reporte mensual");
         DocumentExportFactory fileJson = new JsonExporterCreator();
-        fileJson.processExport("Reporte mensual");
+//        fileJson.processExport("Reporte mensual");
+
+        // Priority Notification
+        NotificationFactory notificationEmail = new EmailNotificationCreator();
+//        notificationEmail.processNotification("Tu pedido ha sido enviado");
+        NotificationFactory notificationSms = new SmsNotificationCreator();
+//        notificationSms.processNotification("Tu pedido ha sido enviado");
+        NotificationFactory notificationPush = new PushNotificationCreator();
+//        notificationPush.processNotification("Tu pedido ha sido enviado");
+
+        // Report Generator
+
+
+
     }
 }
