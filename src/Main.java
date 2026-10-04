@@ -197,22 +197,22 @@ public class Main {
 //        ship.showStatus();
 
         // Vending Machine
-        VendingMachine product = new VendingMachine();
-        System.out.println("----- Camino 1 -----");
-        product.showStatus();
-        product.selectProduct();
-        product.showStatus();
-        product.pay();
-        product.showStatus();
-        product.dispense();
-        product.showStatus();
-        System.out.println("----- Camino 2 -----");
-        VendingMachine product2 = new VendingMachine();
-        product2.showStatus();
-        product2.selectProduct();
-        product2.showStatus();
-        product2.cancel();
-        product2.showStatus();
+//        VendingMachine product = new VendingMachine();
+//        System.out.println("----- Camino 1 -----");
+//        product.showStatus();
+//        product.selectProduct();
+//        product.showStatus();
+//        product.pay();
+//        product.showStatus();
+//        product.dispense();
+//        product.showStatus();
+//        System.out.println("----- Camino 2 -----");
+//        VendingMachine product2 = new VendingMachine();
+//        product2.showStatus();
+//        product2.selectProduct();
+//        product2.showStatus();
+//        product2.cancel();
+//        product2.showStatus();
 
     }
 }

@@ -1,6 +1,7 @@
 package creacionales.singleton;
 
 public class SessionManager {
+    Logger logger = Logger.getInstance();
     private static SessionManager instance;
 
     private SessionManager() {}
@@ -13,6 +14,7 @@ public class SessionManager {
     }
 
     public void startSession(String username) {
-        System.out.println("[SESSION] Sesión iniciada para: " + username);
+        logger.setLevel("SESSION");
+        logger.log("Sesión iniciada para: " + username);
     }
 }
