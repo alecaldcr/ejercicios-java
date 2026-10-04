@@ -27,6 +27,7 @@ import creacionales.singleton.*;
 import estructurales.decorator.ejercicio1.*;
 import estructurales.decorator.ejercicio2.*;
 import estructurales.decorator.ejercicio2.Package;
+import estructurales.facade.HotelFacade;
 
 public class Main {
 
@@ -158,18 +159,27 @@ public class Main {
 
         // Packages Travel
         // Basic
-        Package basicTrip = new BasicTrip();
-        System.out.println("Paquete básico de viaje: $" + basicTrip.getPrice());
-        basicTrip = new Hotel(basicTrip);
-        System.out.println("Paquete básico de viaje + Hotel: $" + basicTrip.getPrice());
-        basicTrip = new AirportTransfer(basicTrip);
-        System.out.println("Paquete básico de viaje + Hotel + Traslado al Aeropuerto: $" + basicTrip.getPrice());
-        // Adventure
-        Package adventureTrip = new AdventureTrip();
-        System.out.println("Paquete de viaje Aventura: $" + adventureTrip.getPrice());
-        adventureTrip = new Hotel(adventureTrip);
-        System.out.println("Paquete de viaje Aventura + Hotel: $" + adventureTrip.getPrice());
-        adventureTrip = new TravelInsurance(adventureTrip);
-        System.out.println("Paquete de viaje Aventura + Hotel + Seguro de viaje: $" + adventureTrip.getPrice());
+//        Package basicTrip = new BasicTrip();
+//        System.out.println("Paquete básico de viaje: $" + basicTrip.getPrice());
+//        basicTrip = new Hotel(basicTrip);
+//        System.out.println("Paquete básico de viaje + Hotel: $" + basicTrip.getPrice());
+//        basicTrip = new AirportTransfer(basicTrip);
+//        System.out.println("Paquete básico de viaje + Hotel + Traslado al Aeropuerto: $" + basicTrip.getPrice());
+//        // Adventure
+//        Package adventureTrip = new AdventureTrip();
+//        System.out.println("Paquete de viaje Aventura: $" + adventureTrip.getPrice());
+//        adventureTrip = new Hotel(adventureTrip);
+//        System.out.println("Paquete de viaje Aventura + Hotel: $" + adventureTrip.getPrice());
+//        adventureTrip = new TravelInsurance(adventureTrip);
+//        System.out.println("Paquete de viaje Aventura + Hotel + Seguro de viaje: $" + adventureTrip.getPrice());
+
+        // Facade
+        HotelFacade hotel = new HotelFacade();
+//        hotel.bookRoom();
+
+        // Patrones de Comportamiento
+
+        // Strategy
+
     }
 }
