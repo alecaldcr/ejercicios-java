@@ -1,3 +1,5 @@
+import creacionales.abstractfactory.ejercicio1.*;
+import creacionales.abstractfactory.ejercicio2.*;
 import creacionales.factorymethod.ejercicio1.CarFactory;
 import creacionales.factorymethod.ejercicio1.SedanCreator;
 import creacionales.factorymethod.ejercicio1.SuvCreator;
@@ -21,7 +23,6 @@ import creacionales.factorymethod.ejercicio6.ReportGeneratorFactory;
 import creacionales.factorymethod.ejercicio7.ExpressShippingCreator;
 import creacionales.factorymethod.ejercicio7.InternationalShippingCreator;
 import creacionales.factorymethod.ejercicio7.ShippingFactory;
-import creacionales.factorymethod.ejercicio7.ShippingService;
 import creacionales.singleton.*;
 
 public class Main {
@@ -102,11 +103,35 @@ public class Main {
 
         // Order Processing System
         ShippingFactory express = new ExpressShippingCreator();
-        express.processShipping(456);
+//        express.processShipping(456);
         ShippingFactory international = new InternationalShippingCreator();
-        international.processShipping(789);
+//        international.processShipping(789);
 
         // Abstract Factory
+
+        // Mobile Device
+        GUIFactory androidFactory = new AndroidFactory();
+        Font fontAndroid = androidFactory.createFont();
+        Keyboard keyboardAndroid = androidFactory.createKeyboard();
+//        fontAndroid.render();
+//        keyboardAndroid.render();
+        GUIFactory appleFactory = new AppleFactory();
+        Font fontApple = appleFactory.createFont();
+        Keyboard keyboardApple = appleFactory.createKeyboard();
+//        fontApple.render();
+//        keyboardApple.render();
+
+        // Storage System
+        StorageSystemFactory localFactory = new LocalFactory();
+        Storage localStorage = localFactory.createStorage();
+        Backup localBackup = localFactory.createBackup();
+        localStorage.save("Gato.jpg");
+        localBackup.backup();
+        StorageSystemFactory cloudFactory = new CloudFactory();
+        Storage cloudStorage = cloudFactory.createStorage();
+        Backup cloudBackup = cloudFactory.createBackup();
+        cloudStorage.save("Perro.jpg");
+        cloudBackup.backup();
 
 
     }
