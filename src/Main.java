@@ -139,6 +139,7 @@ public class Main {
         // Decorator
 
         // Food Order
+        //Burger
         Sandwich burger = new Burger();
         System.out.println("Costo de Hamburguesa: $" + burger.getPrice());
         burger = new Cheese(burger);
@@ -147,5 +148,13 @@ public class Main {
         System.out.println("Costo de Hamburguesa + Tocino: $" + burger.getPrice());
         burger = new ExtraMeat(burger);
         System.out.println("Costo de Hamburguesa + Queso + Tocino + Extra Carne: $" + burger.getPrice());
+        // Sandwich BLT
+        Sandwich sandwichBlt = new SandwichBLT();
+        System.out.println("Sandwich BLT: $" + sandwichBlt.getPrice());
+        sandwichBlt = new Bacon(sandwichBlt);
+        System.out.println("Sandwich BLT con Tocino: $" + sandwichBlt.getPrice());
+
+
+
     }
 }
