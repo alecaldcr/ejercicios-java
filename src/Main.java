@@ -24,6 +24,7 @@ import creacionales.factorymethod.ejercicio7.ExpressShippingCreator;
 import creacionales.factorymethod.ejercicio7.InternationalShippingCreator;
 import creacionales.factorymethod.ejercicio7.ShippingFactory;
 import creacionales.singleton.*;
+import estructurales.decorator.ejercicio1.*;
 
 public class Main {
 
@@ -125,14 +126,26 @@ public class Main {
         StorageSystemFactory localFactory = new LocalFactory();
         Storage localStorage = localFactory.createStorage();
         Backup localBackup = localFactory.createBackup();
-        localStorage.save("Gato.jpg");
-        localBackup.backup();
+//        localStorage.save("Gato.jpg");
+//        localBackup.backup();
         StorageSystemFactory cloudFactory = new CloudFactory();
         Storage cloudStorage = cloudFactory.createStorage();
         Backup cloudBackup = cloudFactory.createBackup();
-        cloudStorage.save("Perro.jpg");
-        cloudBackup.backup();
+//        cloudStorage.save("Perro.jpg");
+//        cloudBackup.backup();
 
+        // Patrones Estructurales
 
+        // Decorator
+
+        // Food Order
+        Sandwich burger = new Burger();
+        System.out.println("Costo de Hamburguesa: $" + burger.getPrice());
+        burger = new Cheese(burger);
+        System.out.println("Costo de Hamburguesa + Queso: $" + burger.getPrice());
+        burger = new Bacon(burger);
+        System.out.println("Costo de Hamburguesa + Tocino: $" + burger.getPrice());
+        burger = new ExtraMeat(burger);
+        System.out.println("Costo de Hamburguesa + Queso + Tocino + Extra Carne: $" + burger.getPrice());
     }
 }
