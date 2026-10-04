@@ -1,4 +1,5 @@
 import comportamiento.state.ejercicio1.Order;
+import comportamiento.state.ejercicio2.VendingMachine;
 import comportamiento.strategy.*;
 import creacionales.abstractfactory.ejercicio1.*;
 import creacionales.abstractfactory.ejercicio2.*;
@@ -26,9 +27,6 @@ import creacionales.factorymethod.ejercicio7.ExpressShippingCreator;
 import creacionales.factorymethod.ejercicio7.InternationalShippingCreator;
 import creacionales.factorymethod.ejercicio7.ShippingFactory;
 import creacionales.singleton.*;
-import estructurales.decorator.ejercicio1.*;
-import estructurales.decorator.ejercicio2.*;
-import estructurales.decorator.ejercicio2.Package;
 import estructurales.facade.HotelFacade;
 
 public class Main {
@@ -192,14 +190,29 @@ public class Main {
         // Store Order
 
         Order ship = new Order();
-        ship.showStatus();
-        ship.pay();
-        ship.send();
-        ship.deliver();
-        ship.showStatus();
+//        ship.showStatus();
+//        ship.pay();
+//        ship.send();
+//        ship.deliver();
+//        ship.showStatus();
 
-        //
-
+        // Vending Machine
+        VendingMachine product = new VendingMachine();
+        System.out.println("----- Camino 1 -----");
+        product.showStatus();
+        product.selectProduct();
+        product.showStatus();
+        product.pay();
+        product.showStatus();
+        product.dispense();
+        product.showStatus();
+        System.out.println("----- Camino 2 -----");
+        VendingMachine product2 = new VendingMachine();
+        product2.showStatus();
+        product2.selectProduct();
+        product2.showStatus();
+        product2.cancel();
+        product2.showStatus();
 
     }
 }
