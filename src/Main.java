@@ -1,3 +1,4 @@
+import comportamiento.state.ejercicio1.Order;
 import comportamiento.strategy.*;
 import creacionales.abstractfactory.ejercicio1.*;
 import creacionales.abstractfactory.ejercicio2.*;
@@ -185,7 +186,20 @@ public class Main {
         Message sms = new SMSMessage();
         Message push = new PushMessage();
         MessageChannel channel = new MessageChannel(sms);
-        channel.sendMessage("Documento.zip");
+//        channel.sendMessage("Documento.zip");
+
+        // State
+        // Store Order
+
+        Order ship = new Order();
+        ship.showStatus();
+        ship.pay();
+        ship.send();
+        ship.deliver();
+        ship.showStatus();
+
+        //
+
 
     }
 }
