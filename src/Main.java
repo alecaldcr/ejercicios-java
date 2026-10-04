@@ -18,6 +18,10 @@ import creacionales.factorymethod.ejercicio5.SmsNotificationCreator;
 import creacionales.factorymethod.ejercicio6.CsvReportCreatorEx6;
 import creacionales.factorymethod.ejercicio6.PdfReportCreatorEx6;
 import creacionales.factorymethod.ejercicio6.ReportGeneratorFactory;
+import creacionales.factorymethod.ejercicio7.ExpressShippingCreator;
+import creacionales.factorymethod.ejercicio7.InternationalShippingCreator;
+import creacionales.factorymethod.ejercicio7.ShippingFactory;
+import creacionales.factorymethod.ejercicio7.ShippingService;
 import creacionales.singleton.*;
 
 public class Main {
@@ -97,6 +101,12 @@ public class Main {
 //        reportCsv.processReport("Ventas del mes de Junio");
 
         // Order Processing System
+        ShippingFactory express = new ExpressShippingCreator();
+        express.processShipping(456);
+        ShippingFactory international = new InternationalShippingCreator();
+        international.processShipping(789);
+
+        // Abstract Factory
 
 
     }
