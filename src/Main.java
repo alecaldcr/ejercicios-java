@@ -25,6 +25,8 @@ import creacionales.factorymethod.ejercicio7.InternationalShippingCreator;
 import creacionales.factorymethod.ejercicio7.ShippingFactory;
 import creacionales.singleton.*;
 import estructurales.decorator.ejercicio1.*;
+import estructurales.decorator.ejercicio2.*;
+import estructurales.decorator.ejercicio2.Package;
 
 public class Main {
 
@@ -140,21 +142,34 @@ public class Main {
 
         // Food Order
         //Burger
-        Sandwich burger = new Burger();
-        System.out.println("Costo de Hamburguesa: $" + burger.getPrice());
-        burger = new Cheese(burger);
-        System.out.println("Costo de Hamburguesa + Queso: $" + burger.getPrice());
-        burger = new Bacon(burger);
-        System.out.println("Costo de Hamburguesa + Tocino: $" + burger.getPrice());
-        burger = new ExtraMeat(burger);
-        System.out.println("Costo de Hamburguesa + Queso + Tocino + Extra Carne: $" + burger.getPrice());
-        // Sandwich BLT
-        Sandwich sandwichBlt = new SandwichBLT();
-        System.out.println("Sandwich BLT: $" + sandwichBlt.getPrice());
-        sandwichBlt = new Bacon(sandwichBlt);
-        System.out.println("Sandwich BLT con Tocino: $" + sandwichBlt.getPrice());
+//        Sandwich burger = new Burger();
+//        System.out.println("Costo de Hamburguesa: $" + burger.getPrice());
+//        burger = new Cheese(burger);
+//        System.out.println("Costo de Hamburguesa + Queso: $" + burger.getPrice());
+//        burger = new Bacon(burger);
+//        System.out.println("Costo de Hamburguesa + Tocino: $" + burger.getPrice());
+//        burger = new ExtraMeat(burger);
+//        System.out.println("Costo de Hamburguesa + Queso + Tocino + Extra Carne: $" + burger.getPrice());
+//        // Sandwich BLT
+//        Sandwich sandwichBlt = new SandwichBLT();
+//        System.out.println("Sandwich BLT: $" + sandwichBlt.getPrice());
+//        sandwichBlt = new Bacon(sandwichBlt);
+//        System.out.println("Sandwich BLT con Tocino: $" + sandwichBlt.getPrice());
 
-
-
+        // Packages Travel
+        // Basic
+        Package basicTrip = new BasicTrip();
+        System.out.println("Paquete básico de viaje: $" + basicTrip.getPrice());
+        basicTrip = new Hotel(basicTrip);
+        System.out.println("Paquete básico de viaje + Hotel: $" + basicTrip.getPrice());
+        basicTrip = new AirportTransfer(basicTrip);
+        System.out.println("Paquete básico de viaje + Hotel + Traslado al Aeropuerto: $" + basicTrip.getPrice());
+        // Adventure
+        Package adventureTrip = new AdventureTrip();
+        System.out.println("Paquete de viaje Aventura: $" + adventureTrip.getPrice());
+        adventureTrip = new Hotel(adventureTrip);
+        System.out.println("Paquete de viaje Aventura + Hotel: $" + adventureTrip.getPrice());
+        adventureTrip = new TravelInsurance(adventureTrip);
+        System.out.println("Paquete de viaje Aventura + Hotel + Seguro de viaje: $" + adventureTrip.getPrice());
     }
 }
