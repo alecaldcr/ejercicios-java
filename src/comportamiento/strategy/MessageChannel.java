@@ -1,9 +1,10 @@
 package comportamiento.strategy;
 
 public class MessageChannel {
-    private Message strategy;
+    private MessageStrategy strategy;
 
-    public MessageChannel(Message strategy) {
+    public MessageChannel(MessageStrategy strategy) {
+
         this.strategy = strategy;
     }
 

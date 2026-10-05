@@ -1,5 +1,4 @@
 import comportamiento.state.ejercicio1.Order;
-import comportamiento.state.ejercicio2.VendingMachine;
 import comportamiento.strategy.*;
 import creacionales.abstractfactory.ejercicio1.*;
 import creacionales.abstractfactory.ejercicio2.*;
@@ -180,9 +179,9 @@ public class Main {
         // Patrones de Comportamiento
 
         // Strategy
-        Message email = new EmailMessage();
-        Message sms = new SMSMessage();
-        Message push = new PushMessage();
+        MessageStrategy email = new EmailMessage();
+        MessageStrategy sms = new SMSMessage();
+        MessageStrategy push = new PushMessage();
         MessageChannel channel = new MessageChannel(sms);
 //        channel.sendMessage("Documento.zip");
 

@@ -1,5 +1,5 @@
 package comportamiento.strategy;
 
-public interface Message {
+public interface MessageStrategy {
     void send(String content);
 }
